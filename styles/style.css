@@ -77,7 +77,10 @@ button {
     border: 1px solid #fff;
     border-radius: 13px;
     background-color: transparent;
-    margin-bottom: 13px; }
+    margin-bottom: 13px;
+    outline: 0;
+    outline-offset: 0;
+    color: #fff; }
   .form input {
     width: calc(50% - 5.5px); }
   .form textarea {
@@ -86,16 +89,16 @@ button {
     resize: none; }
 
 .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
-  color: #fff; }
+  color: #d6d6d6; }
 
 .form input::-moz-placeholder, .form textarea::-moz-placeholder {
-  color: #fff; }
+  color: #d6d6d6; }
 
 .form input:-moz-placeholder, .form textarea:-moz-placeholder {
-  color: #fff; }
+  color: #d6d6d6; }
 
 .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
-  color: #fff; }
+  color: #d6d6d6; }
 
 .grid-item-bg,
 .grid-item-blue,

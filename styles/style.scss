@@ -92,6 +92,9 @@ button {
 		border-radius: 13px;
 		background-color: transparent;
 		margin-bottom: 13px;
+		outline: 0;
+    	outline-offset: 0;
+    	color: #fff;
 	}
 	& input {
 		width: calc(50% - 5.5px);
@@ -103,10 +106,10 @@ button {
 	}
 }
 
-.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {color: #fff;}
-.form input::-moz-placeholder, .form textarea::-moz-placeholder {color: #fff;}
-.form input:-moz-placeholder, .form textarea:-moz-placeholder {color: #fff;}
-.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {color: #fff;}
+.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {color: #d6d6d6;}
+.form input::-moz-placeholder, .form textarea::-moz-placeholder {color: #d6d6d6;}
+.form input:-moz-placeholder, .form textarea:-moz-placeholder {color: #d6d6d6;}
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {color: #d6d6d6;}
 
 .grid-item-bg,
 .grid-item-blue,
