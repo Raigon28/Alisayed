@@ -5,25 +5,16 @@ body {
 h2 {
 	font-size: 45px;	
     letter-spacing: 1.5px;
-    @media (max-width: 1000px){
-		font-size: 35px;
-    }
 }
 
 h3 {
 	font-size: 42px;
 	letter-spacing: 1px;
-    @media (max-width: 1000px){
-		font-size: 32px;
-    }
 }
 
 h4 {
 	font-size: 40px;
 	letter-spacing: 1.2px;
-    @media (max-width: 1000px){
-		font-size: 30px;
-    }
 }
 
 h2, h3, h4 {
@@ -34,6 +25,7 @@ h2, h3, h4 {
 	}
 	@media (max-width: 1000px){
 		margin-bottom: 20px;
+		font-size: 30px;
     }
 }
 
@@ -72,6 +64,12 @@ a {
 	@media (max-width: 1000px){
 		margin-top: 25px;
     }
+    @media (max-width: 705px){
+		margin: 25px auto 0;
+    }
+    @media (max-width: 330px){
+		max-width: 180px;
+    }
 }
 
 .grid-item-beige a {
@@ -80,7 +78,10 @@ a {
 }
 
 .span {
-	display: block;
+	display: block;	
+    @media (max-width: 705px) {
+    	display: initial;
+    }
 }
 
 button {
@@ -126,12 +127,43 @@ button {
 		min-height: 159px;
 		resize : none;
 	}
+	& input::-webkit-input-placeholder, & textarea::-webkit-input-placeholder {
+		color: #d6d6d6;
+		@media (max-width: 330px){
+			font-size: 13px;
+	    }
+	}
+	& input::-moz-placeholder, & textarea::-moz-placeholder {
+		color: #d6d6d6;
+		@media (max-width: 330px){
+			font-size: 13px;
+	    }
+	}
+	& input:-moz-placeholder, & textarea:-moz-placeholder {
+		color: #d6d6d6;
+		@media (max-width: 330px){
+			font-size: 13px;
+	    }
+	}
+	& input:-ms-input-placeholder, & textarea:-ms-input-placeholder {
+		color: #d6d6d6;
+		@media (max-width: 330px){
+			font-size: 13px;
+	    }
+	}
 }
 
-.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {color: #d6d6d6;}
-.form input::-moz-placeholder, .form textarea::-moz-placeholder {color: #d6d6d6;}
-.form input:-moz-placeholder, .form textarea:-moz-placeholder {color: #d6d6d6;}
-.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {color: #d6d6d6;}
+.grid {
+	display: grid;
+	grid-template-areas: 
+    "a a a a a a b b b" 
+    "c c c c d d d d d"
+    "c c c c e e e e e"
+    "f f f g g g g g g";
+    @media (max-width: 705px) {
+    	grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+    }
+}
 
 .grid-item-bg,
 .grid-item-blue,
@@ -154,12 +186,14 @@ button {
 	@media (max-width: 1000px){
 		padding: 40px 30px;
     }
+    @media (max-width: 330px){
+		padding: 35px 25px;
+    }
 }
-
 
 .grid-item-bg {
 	background-image: url('../img/bg.png');
-  	grid-area: a; 
+  	grid-area: a;
 }
 
 .grid-item-gray {
@@ -182,12 +216,18 @@ button {
 
 .grid-item-beige {
   	grid-area: d; 
-	background-image: url('../img/bg-beige.png');
+	background-image: url('../img/bg-beige.png');	
+	@media (max-width: 705px){
+		text-align: center;
+    }
 }
 
 .grid-item-black {
   	grid-area: e; 
 	background-image: url('../img/bg-black.png');
+	@media (max-width: 705px){
+		text-align: center;
+    }
 }
 
 .grid-item-human {
@@ -199,6 +239,9 @@ button {
 	justify-content: space-between;
 	@media (max-width: 1000px){
 		min-height: inherit;
+    }
+    @media (max-width: 705px){
+    	text-align: center;	
     }
 }
 
@@ -212,6 +255,9 @@ button {
 	@media (max-width: 1000px){
 		min-height: inherit;
     }
+    @media (max-width: 705px){
+		text-align: center;
+    }
 }
 
 .grid-item-blue,
@@ -219,15 +265,6 @@ button {
 .grid-item-human, 
 .grid-item-green {
 	color: #fff;
-}
-
-.grid {
-	display: grid;
-	grid-template-areas: 
-    "a a a a a a b b b" 
-    "c c c c d d d d d"
-    "c c c c e e e e e"
-    "f f f g g g g g g";
 }
 
 .logo {
@@ -240,6 +277,9 @@ button {
 		width: 70px;
 		height: 70px;
 		background-size: cover;
+    }
+    @media (max-width: 705px){
+		margin: 0 auto 25px;
     }
 }
 
@@ -269,5 +309,8 @@ button {
 			display: block;
 			border: none;
 		}
+	}
+	@media (max-width: 705px) {
+		justify-content: center;
 	}
 }

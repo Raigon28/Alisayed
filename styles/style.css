@@ -4,23 +4,14 @@ body {
 h2 {
   font-size: 45px;
   letter-spacing: 1.5px; }
-  @media (max-width: 1000px) {
-    h2 {
-      font-size: 35px; } }
 
 h3 {
   font-size: 42px;
   letter-spacing: 1px; }
-  @media (max-width: 1000px) {
-    h3 {
-      font-size: 32px; } }
 
 h4 {
   font-size: 40px;
   letter-spacing: 1.2px; }
-  @media (max-width: 1000px) {
-    h4 {
-      font-size: 30px; } }
 
 h2, h3, h4 {
   margin-top: 0;
@@ -29,7 +20,8 @@ h2, h3, h4 {
     font-weight: 900; }
   @media (max-width: 1000px) {
     h2, h3, h4 {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      font-size: 30px; } }
 
 p {
   font-size: 15.57px;
@@ -63,6 +55,12 @@ a {
   @media (max-width: 1000px) {
     a {
       margin-top: 25px; } }
+  @media (max-width: 705px) {
+    a {
+      margin: 25px auto 0; } }
+  @media (max-width: 330px) {
+    a {
+      max-width: 180px; } }
 
 .grid-item-beige a {
   color: #262f32;
@@ -70,6 +68,9 @@ a {
 
 .span {
   display: block; }
+  @media (max-width: 705px) {
+    .span {
+      display: initial; } }
 
 button {
   margin-bottom: 64px;
@@ -109,18 +110,33 @@ button {
     width: 100%;
     min-height: 159px;
     resize: none; }
+  .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+    color: #d6d6d6; }
+    @media (max-width: 330px) {
+      .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+        font-size: 13px; } }
+  .form input::-moz-placeholder, .form textarea::-moz-placeholder {
+    color: #d6d6d6; }
+    @media (max-width: 330px) {
+      .form input::-moz-placeholder, .form textarea::-moz-placeholder {
+        font-size: 13px; } }
+  .form input:-moz-placeholder, .form textarea:-moz-placeholder {
+    color: #d6d6d6; }
+    @media (max-width: 330px) {
+      .form input:-moz-placeholder, .form textarea:-moz-placeholder {
+        font-size: 13px; } }
+  .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+    color: #d6d6d6; }
+    @media (max-width: 330px) {
+      .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+        font-size: 13px; } }
 
-.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
-  color: #d6d6d6; }
-
-.form input::-moz-placeholder, .form textarea::-moz-placeholder {
-  color: #d6d6d6; }
-
-.form input:-moz-placeholder, .form textarea:-moz-placeholder {
-  color: #d6d6d6; }
-
-.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
-  color: #d6d6d6; }
+.grid {
+  display: grid;
+  grid-template-areas: "a a a a a a b b b"  "c c c c d d d d d" "c c c c e e e e e" "f f f g g g g g g"; }
+  @media (max-width: 705px) {
+    .grid {
+      grid-template-areas: "a" "b" "c" "d" "e" "f" "g"; } }
 
 .grid-item-bg,
 .grid-item-blue,
@@ -147,6 +163,14 @@ button {
     .grid-item-human,
     .grid-item-green {
       padding: 40px 30px; } }
+  @media (max-width: 330px) {
+    .grid-item-gray,
+    .grid-item-blue,
+    .grid-item-beige,
+    .grid-item-black,
+    .grid-item-human,
+    .grid-item-green {
+      padding: 35px 25px; } }
 
 .grid-item-bg {
   background-image: url("../img/bg.png");
@@ -168,10 +192,16 @@ button {
 .grid-item-beige {
   grid-area: d;
   background-image: url("../img/bg-beige.png"); }
+  @media (max-width: 705px) {
+    .grid-item-beige {
+      text-align: center; } }
 
 .grid-item-black {
   grid-area: e;
   background-image: url("../img/bg-black.png"); }
+  @media (max-width: 705px) {
+    .grid-item-black {
+      text-align: center; } }
 
 .grid-item-human {
   grid-area: f;
@@ -183,6 +213,9 @@ button {
   @media (max-width: 1000px) {
     .grid-item-human {
       min-height: inherit; } }
+  @media (max-width: 705px) {
+    .grid-item-human {
+      text-align: center; } }
 
 .grid-item-green {
   grid-area: g;
@@ -194,16 +227,15 @@ button {
   @media (max-width: 1000px) {
     .grid-item-green {
       min-height: inherit; } }
+  @media (max-width: 705px) {
+    .grid-item-green {
+      text-align: center; } }
 
 .grid-item-blue,
 .grid-item-black,
 .grid-item-human,
 .grid-item-green {
   color: #fff; }
-
-.grid {
-  display: grid;
-  grid-template-areas: "a a a a a a b b b"  "c c c c d d d d d" "c c c c e e e e e" "f f f g g g g g g"; }
 
 .logo {
   background-image: url("../img/logo.png");
@@ -216,6 +248,9 @@ button {
       width: 70px;
       height: 70px;
       background-size: cover; } }
+  @media (max-width: 705px) {
+    .logo {
+      margin: 0 auto 25px; } }
 
 .list {
   list-style-type: none;
@@ -238,5 +273,8 @@ button {
       height: 45px;
       display: block;
       border: none; }
+  @media (max-width: 705px) {
+    .list {
+      justify-content: center; } }
 
 /*# sourceMappingURL=style.css.map */
